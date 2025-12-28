@@ -9,7 +9,6 @@ function App() {
 
   return (
     <ReactLenis root>
-      {/* 2. Wrap NavBar to detect mouse entry/exit */}
       <div 
         onMouseEnter={() => setIsOverNav(true)} 
         onMouseLeave={() => setIsOverNav(false)}
@@ -17,7 +16,6 @@ function App() {
         <NavBar />
       </div>
 
-      {/* 3. Pass the 'hide' instruction to the Home page */}
       <Home hideCursor={isOverNav} />
     </ReactLenis>
   );

@@ -3,8 +3,25 @@ import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Search } from 'lucide-react';
 import CustomCursor from '../components/CustomCursor';
 import ScrollToTop from '../components/ScrollToTop';
+import personVR from '../assets/Person-with-VR-Headset-m_f.png';
+import stoneComposition from '../assets/Minimalist-Stone-Composition-m_f.png';
+import characterJar from '../assets/Whimsical-Character-in-a-Jar-m_f.png';
+import iceCream from '../assets/Three-Scoops-of-Ice-Cream-on-Spoons.webp';
+import greenCharacter from '../assets/Green-Character-in-Yellow-Hoodie-m_f.png';
+import burgers from '../assets/burgers.webp';
+import speakers from '../assets/speakers.webp';
+import camera from '../assets/camera.webp';
+import bottle from '../assets/bottle.webp';
+import cap from '../assets/cap.webp';
+import headphones from '../assets/headphones.webp';
+import shoes from '../assets/shoes.webp';
+import luxuryBoxes from '../assets/luxuryBoxes.webp';
+import mouse from '../assets/mouse.webp';
+import girl from '../assets/girl.webp';
+import book from '../assets/book.webp';
+import music from '../assets/music.webp';
+import star from '../assets/star.svg';
 
-// Card component with cursor-based movement (done by claude)
 const Card = ({ src, alt, initialY, rotate, isDarkTheme }) => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -63,42 +80,40 @@ const Home = ({ hideCursor }) => {
     const links = ['Index', 'News', 'Projects', 'Pages', 'Shop', 'Contact'];
     const tabs = ['All Categories', 'Creative', 'Design', 'Photo', 'Style'];
 
-    // Image sources for each category - replace with your actual image paths
     const categoryImages = {
         'All Categories': [
-            'src/assets/burgers.webp',
-            'src/assets/speakers.webp',
-            'src/assets/camera.webp',
-            'src/assets/bottle.webp',
-            'src/assets/cap.webp',
-            'src/assets/headphones.webp',
-            'src/assets/shoes.webp',
-            'src/assets/luxuryBoxes.webp',
-            'src/assets/mouse.webp'
+            burgers,
+            speakers,
+            camera,
+            bottle,
+            cap,
+            headphones,
+            shoes,
+            luxuryBoxes,
+            mouse
         ],
         'Creative': [
-            'src/assets/burgers.webp',
-            'src/assets/cap.webp',
-            'src/assets/mouse.webp'
+            burgers,
+            cap,
+            mouse
         ],
         'Design': [
-            'src/assets/speakers.webp',
-            'src/assets/headphones.webp',
-            'src/assets/girl.webp'
+            speakers,
+            headphones,
+            girl
         ],
         'Photo': [
-            'src/assets/camera.webp',
-            'src/assets/shoes.webp',
-            'src/assets/book.webp'
+            camera,
+            shoes,
+            book
         ],
         'Style': [
-            'src/assets/bottle.webp',
-            'src/assets/luxuryBoxes.webp',
-            'src/assets/music.webp'
+            bottle,
+            luxuryBoxes,
+            music
         ]
     };
 
-    // Text labels for each category
     const categoryLabels = {
         'All Categories': ['THE DARK SIDE', 'JUSTICE ROBOT', 'COLOR CURRENT', 'SUBSEQUENT SNEEZE', 'WIGGLY FINGER', 'SHARE SPARK', 'THE DARK SIDE', 'RANDOM RISK', 'STREAM SHOP', 'FREEZING BIRTHDAY'],
         'Creative': ['THE DARK SIDE', 'WIGGLY FINGER', 'FREEZING BIRTHDAY'],
@@ -326,7 +341,7 @@ const Home = ({ hideCursor }) => {
                     <div className="flex items-center justify-center w-full">
                         {/* Card 1 - Right tilt, upper position */}
                         <Card
-                            src="src/assets/Person-with-VR-Headset-m_f.png"
+                            src={personVR}
                             alt="Card 1"
                             initialY={0}
                             rotate={5}
@@ -335,7 +350,7 @@ const Home = ({ hideCursor }) => {
 
                         {/* Card 2 - Left tilt, lower position */}
                         <Card
-                            src="src/assets/Minimalist-Stone-Composition-m_f.png"
+                            src={stoneComposition}
                             alt="Card 2"
                             initialY={-25}
                             rotate={-5}
@@ -344,7 +359,7 @@ const Home = ({ hideCursor }) => {
 
                         {/* Card 3 - Right tilt, upper position */}
                         <Card
-                            src="src/assets/Whimsical-Character-in-a-Jar-m_f.png"
+                            src={characterJar}
                             alt="Card 3"
                             initialY={0}
                             rotate={5}
@@ -353,7 +368,7 @@ const Home = ({ hideCursor }) => {
 
                         {/* Card 4 - Left tilt, lower position */}
                         <Card
-                            src="src/assets/Three-Scoops-of-Ice-Cream-on-Spoons.webp"
+                            src={iceCream}
                             alt="Card 4"
                             initialY={-35}
                             rotate={-5}
@@ -362,7 +377,7 @@ const Home = ({ hideCursor }) => {
 
                         {/* Card 5 - Right tilt, upper position */}
                         <Card
-                            src="src/assets/Green-Character-in-Yellow-Hoodie-m_f.png"
+                            src={greenCharacter}
                             alt="Card 5"
                             initialY={0}
                             rotate={5}
@@ -564,26 +579,26 @@ const Home = ({ hideCursor }) => {
                         className="flex items-center gap-8 whitespace-nowrap w-max"
                     >
                         <li className="text-4xl sm:text-7xl font-bold">Photography</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Video Production</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Design & Branding</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">eCommerce</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Mobile Application</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         {/* Duplicate for seamless loop */}
                         <li className="text-4xl sm:text-7xl font-bold">Photography</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Video Production</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Design & Branding</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">eCommerce</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                         <li className="text-4xl sm:text-7xl font-bold">Mobile Application</li>
-                        <li><img src="src/assets/star.svg" alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
+                        <li><img src={star} alt="Star" className="w-5 h-5 sm:w-10 sm:h-10" /></li>
                     </motion.ul>
                 </footer>
 
